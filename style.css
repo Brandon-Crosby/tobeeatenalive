@@ -288,7 +288,7 @@ html, body {
     }
 
 @media(max-width: 900px) {
-      .watch, .rotatethis, .hero-gif {
+      .watch, .rotatethis, .hero-gif, .cursor {
             display: none !important;
       }
 
