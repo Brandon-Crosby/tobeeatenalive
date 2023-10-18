@@ -5,10 +5,22 @@ html, body {
       height: 100vh;
       font-family: "Monument Extended";
       background: url(https://media.giphy.com/media/3oEduMhFrYvKk4giac/giphy.gif) no-repeat 50% 50%;
-
+      background-color: black;
       background-size: cover;
       text-transform: uppercase;
+      cursor: none; 
 }
+
+.cursor {
+      pointer-events: none;
+      position: fixed;
+      padding: 0.3rem;
+      background-color: #fff;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      transition: transform 0.3s ease;
+      cursor: none; /* Hide the default cursor */
+    }
 
 .gif-overlay {
       z-index: -1;
@@ -46,25 +58,44 @@ html, body {
       font-weight: 100;
       letter-spacing: 4px;
       text-decoration: none;
+      transition: color 0.3s ease;
 }
+
+.watch:hover, .watch ion-icon:hover, .instagram:hover {
+      color: white; /* Change to your desired color */
+      transition: color 0.3s ease; /* Add a transition for a smooth color change */
+    }
 
 .watch ion-icon {
       z-index: 2;
       position: relative;
       top: 1px;
       padding-right: 6px;
+      transition: color 0.3s ease;
+
 }
 
 .menu {
       z-index: 2;
       position: fixed;
-      right: 0;
+      right: 16px;
       font-size: 20px;
       line-height: 80px;
       margin: 0 40px;
-      color: #fff;
-      padding-top: 4px;
+      /* color: #fff; */
+      padding-top: 8px;
+      
+      
 }
+
+.img {
+      width: 32px;
+      transition: transform 0.3s ease;
+    }
+    
+    .img:hover {
+      transform: scale(1.1);
+    }
 
 .hero-gif {
       position: absolute;
@@ -76,7 +107,22 @@ html, body {
       background: url(mariah.gif) no-repeat 50% 50%;
       background-size: cover;
       animation-delay: 2s;
-      -webkit-animation: animateGIF 4s cubic-bezier(0,.58,1,.58);
+      -webkit-animation: animateGIF 4s linear;
+      transition: transform 0.3s ease;
+}
+
+.instagram {
+      text-decoration: none;
+      z-index: 2;
+      margin: 0 40px;
+      color: grey;
+      padding: 0 10px;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 100;
+      letter-spacing: 4px;
+      text-decoration: none;
+      transition: color 0.3s ease;
 }
 
 @-webkit-keyframes animateGIF {
@@ -171,7 +217,7 @@ html, body {
 }
 
 .hero-title p {
-      color: grey;
+      color: white;
       font-family: Tahoma, Arial, sans-serif; /* Specify fallback fonts in case Tahoma is not available */
       text-transform: uppercase;
       font-size: 12px;
@@ -204,16 +250,25 @@ html, body {
 .listensong ul li {
       display: inline-block;
       list-style: none;
-      color: #fff;
+      color: grey;
       padding: 0 10px;
 }
 
-#rotated  {
+.watch-mobile {
+      display: none;
+}
+
+.extra-space::before {
+      content: "\00a0"; /* Unicode for non-breaking space */
+    }
+
+#rotated {
       color: #fff;
       font-family: Helvetica;
       font-weight: 100;
-      font-size: 12px;
-}
+      font-size: 24px; /* Adjust the font size */
+      padding: 12px; /* Add padding to create space between letters */
+    }
 
 .rotatethis {
       position: absolute;
@@ -233,13 +288,54 @@ html, body {
     }
 
 @media(max-width: 900px) {
-      .watch, .rotatethis, .hero-title p, .hero-gif {
+      .watch, .rotatethis, .hero-gif {
             display: none !important;
       }
+
+      .hero-title p {
+            letter-spacing: 2px;
+      }
+
+      .listensong {
+            display: none;
+      }
+
+      .watch-mobile {
+            display: block;
+            z-index: 2;
+            position: absolute;
+            bottom: 0%;
+            right: 75px;
+            line-height: 80px;
+            margin: 0 40px;
+            color: grey;
+            padding: 0 10px;
+            font-family: Helvetica;
+            font-size: 12px;
+            font-weight: 100;
+            letter-spacing: 4px;
+            text-decoration: none;
+      }
+      
+      .watch-mobile ion-icon {
+            z-index: 2;
+            position: relative;
+            top: 1px;
+            padding-right: 6px;
+      }
+
 
       body {
             background: url(mariah.gif) no-repeat 50% 50%;
       } 
+
+      .instagram {
+            display: none;
+      }
+
+      .menu {
+            margin: 0;
+      }
 
       .hero-title {
             top: 45%;

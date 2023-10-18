@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>tobeeatenalive</title>
+    <title>To Be Eaten Alive</title>
     <link
       rel="icon"
       type="image/png"
       href="MariahLogo+Mockup+Black+Purple.png" />
-    <meta author="harrnish" content="ig: @harrnish" />
+    <meta content="ig: @brandosound" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
@@ -24,42 +24,70 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="cursor"></div>
       <div class="hero-section">
         <div class="nav">
           <!-- <div class="artist">Tylor Aviay</div> -->
-          <a class="watch" href="http://www.fromawoman.com"
+          <a
+            class="watch"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://mariahthescientist.lnk.to/FromAWoman?fbclid=PAAaaRbJ8UDhMuEhuvVfpMFt_Vk6rt9Mp05Ik4ZlVxnD-LJKAhWZH_o44PWfo_aem_AZNnlWQLh2o76JaIddcTiVnneSPEB-zZo1BEB1EF4hzKtqVOGraIAxo9EFByJeuUzAw"
             ><ion-icon name="play"></ion-icon> listen now</a
           >
-          <div class="menu"><ion-icon name="menu"></ion-icon></div>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.mariahthescientist.com/"
+            ><div class="menu">
+              <img class="img" src="MariahLogo+Mockup+Black+Purple.png" /></div
+          ></a>
         </div>
 
-        <div class="hero-gif"></div>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.youtube.com/watch?v=K-NSQpEVjB8"
+          ><div class="hero-gif"></div
+        ></a>
 
         <div class="hero-title">
           <h1 class="glitch" data-text="to be eaten alive">
             TO BE EATEN ALIVE
           </h1>
           <p>MARIAH THE SCIENTIST</p>
+          <p id="countdown" style="color: white"></p>
         </div>
 
         <div class="rotatethis">
-          <h2 id="rotated">buckles • laboratories •</h2>
+          <pre>
+            <h2 id="rotated">buckles laboratories </h2>
+          </pre>
         </div>
 
         <div class="social-media">
           <ul>
-            <li>facebook</li>
-            <li>instagram</li>
-            <li>twitter</li>
+            <li>
+              <a
+                class="instagram"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="http://www.instagram.com/mariahthescientist"
+                >instagram</a
+              >
+            </li>
           </ul>
         </div>
-
+        <a
+          class="watch-mobile"
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://mariahthescientist.lnk.to/FromAWoman?fbclid=PAAaaRbJ8UDhMuEhuvVfpMFt_Vk6rt9Mp05Ik4ZlVxnD-LJKAhWZH_o44PWfo_aem_AZNnlWQLh2o76JaIddcTiVnneSPEB-zZo1BEB1EF4hzKtqVOGraIAxo9EFByJeuUzAw"
+          ><ion-icon name="play"></ion-icon> listen now</a
+        >
         <div class="listensong">
           <ul>
-            <li><ion-icon name="play"></ion-icon></li>
             <li><ion-icon name="musical-notes"></ion-icon></li>
-            <li><ion-icon name="microphone"></ion-icon></li>
-            <li><ion-icon name="videocam"></ion-icon></li>
           </ul>
         </div>
       </div>
@@ -72,6 +100,45 @@
       src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
 
     <script>
+      // Set the target date
+      const targetDate = new Date("2023-10-27T00:00:00Z").getTime();
+
+      // Update the countdown every second
+      const countdown = document.getElementById("countdown");
+      const timer = setInterval(updateCountdown, 1000);
+
+      function updateCountdown() {
+        const currentDate = new Date().getTime();
+        const timeRemaining = targetDate - currentDate;
+
+        if (timeRemaining <= 0) {
+          clearInterval(timer);
+          countdown.innerHTML = "Countdown expired!";
+        } else {
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+          const seconds = Math.floor((timeRemaining / 1000) % 60);
+
+          countdown.innerHTML = `${days}d:${hours}h:${seconds}s`;
+        }
+      }
+
+      //
+      const cursor = document.querySelector(".cursor");
+      const editCursor = (e) => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      };
+
+      const isMobile = window.innerWidth <= 900; // Define a breakpoint for mobile
+
+      const animationDelay = isMobile ? 2 : 5.2; // Adjust the delay based on device
+
+      const animationDelayArtist = isMobile ? 4 : 9; // Adjust the delay based on device
+
+      window.addEventListener("mousemove", editCursor);
+
       const circleType = new CircleType(document.getElementById("rotated"));
 
       TweenMax.from(".artist", 2, {
@@ -88,8 +155,15 @@
         ease: Expo.easeInOut,
       });
 
+      TweenMax.from(".watch-mobile", 2, {
+        delay: animationDelay,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut,
+      });
+
       TweenMax.from(".menu", 2, {
-        delay: 5.6,
+        delay: animationDelay,
         opacity: 0,
         y: 20,
         ease: Expo.easeInOut,
@@ -134,7 +208,7 @@
           opacity: 0,
         },
         {
-          delay: 5,
+          delay: animationDelay,
           x: 6,
           y: -2,
           opacity: 1,
@@ -157,7 +231,7 @@
           opacity: 0,
         },
         {
-          delay: 9,
+          delay: animationDelayArtist,
           x: 6,
           y: -2,
           opacity: 1,
