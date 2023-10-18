@@ -100,28 +100,38 @@
       src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
 
     <script>
-      // Set the target date
-      const targetDate = new Date("2023-10-27T00:00:00Z").getTime();
-
-      // Update the countdown every second
-      const countdown = document.getElementById("countdown");
-      const timer = setInterval(updateCountdown, 1000);
-
+      // Function to update the countdown
       function updateCountdown() {
-        const currentDate = new Date().getTime();
+        // Define the target date in UTC (Coordinated Universal Time)
+        const targetDate = new Date("2023-10-27T04:00:00Z"); // Midnight in UTC
+
+        // Current date
+        const currentDate = new Date();
+
+        // Calculate the time remaining
         const timeRemaining = targetDate - currentDate;
 
         if (timeRemaining <= 0) {
-          clearInterval(timer);
-          countdown.innerHTML = "Countdown expired!";
+          // Countdown expired
+          document.getElementById("countdown").innerHTML = "Countdown expired!";
         } else {
+          // Calculate days, hours, minutes, and seconds
           const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
           const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
           const seconds = Math.floor((timeRemaining / 1000) % 60);
 
-          countdown.innerHTML = `${days}d:${hours}h:${seconds}s`;
+          // Display the countdown with colons
+          const countdownText = `${days}d:${hours}h:${minutes}m:${seconds}s`;
+          document.getElementById("countdown").innerHTML = countdownText;
         }
       }
+
+      // Initial call to set the countdown without a one-second delay
+      updateCountdown();
+
+      // Update the countdown every second
+      setInterval(updateCountdown, 1000);
 
       //
       const cursor = document.querySelector(".cursor");
