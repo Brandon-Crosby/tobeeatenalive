@@ -113,7 +113,7 @@
 
       const animationDelay = isMobile ? 2 : 5.2; // Adjust the delay based on device
 
-      const animationDelayArtist = isMobile ? 2 : 9; // Adjust the delay based on device
+      const animationDelayArtist = isMobile ? 4 : 9; // Adjust the delay based on device
 
       window.addEventListener("mousemove", editCursor);
 
@@ -200,30 +200,34 @@
         }
       );
 
-      TweenMax.fromTo(
-        ".hero-title p",
-        0.3,
-        {
-          x: 0, // Change the starting position values
-          y: 0,
-          opacity: 0,
-        },
-        {
-          delay: animationDelayArtist,
-          x: 6, // Change the ending position values
-          y: -2,
-          opacity: 1,
-          ease: isMobile
-            ? Expo.easeInOut
-            : RoughEase.ease.config({
-                strength: 8,
-                points: 40,
-                template: Linear.easeNone,
-                randomize: false,
-              }), // Use a different ease function
-          clearProps: "all",
-        }
-      );
+      if (window.innerWidth > 900) {
+        // This code will run only on desktop devices (screen width greater than 900 pixels)
+
+        TweenMax.fromTo(
+          ".hero-title p",
+          0.3,
+          {
+            x: 0, // Change the starting position values
+            y: 0,
+            opacity: 0,
+          },
+          {
+            delay: animationDelayArtist,
+            x: 6, // Change the ending position values
+            y: -2,
+            opacity: 1,
+            ease: RoughEase.ease.config({
+              strength: 8,
+              points: 40,
+              template: Linear.easeNone,
+              randomize: false,
+            }), // Use a different ease function
+            clearProps: "all",
+          }
+        );
+
+        // Add other animations here
+      }
     </script>
   </body>
 </html>
