@@ -200,25 +200,20 @@
         }
       );
 
-      TweenLite.fromTo(
+      TweenMax.fromTo(
         ".hero-title p",
         0.3,
         {
-          x: -6,
-          y: 2,
+          x: 0, // Change the starting position values
+          y: 0,
           opacity: 0,
         },
         {
           delay: animationDelayArtist,
-          x: 6,
+          x: 6, // Change the ending position values
           y: -2,
           opacity: 1,
-          ease: RoughEase.ease.config({
-            strength: 8,
-            points: 40,
-            template: Linear.easeNone,
-            randomize: false,
-          }),
+          ease: Power2.easeOut, // Use a different ease function
           clearProps: "all",
         }
       );
