@@ -93,46 +93,13 @@
 
       <div class="gif-overlay"></div>
     </div>
+    <script src="countdown.js"></script>
 
     <script
       type="text/javascript"
       src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
 
     <script>
-      // Function to update the countdown
-      function updateCountdown() {
-        // Define the target date in UTC (Coordinated Universal Time)
-        const targetDate = new Date("2023-10-27T04:00:00Z"); // Midnight in UTC
-
-        // Current date
-        const currentDate = new Date();
-
-        // Calculate the time remaining
-        const timeRemaining = targetDate - currentDate;
-
-        if (timeRemaining <= 0) {
-          // Countdown expired
-          document.getElementById("countdownText").textContent =
-            "Countdown expired!";
-        } else {
-          // Calculate days, hours, minutes, and seconds
-          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
-          const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
-          const seconds = Math.floor((timeRemaining / 1000) % 60);
-
-          // Display the countdown with colons
-          const countdownText = `${days}d:${hours}h:${minutes}m:${seconds}s`;
-          document.getElementById("countdownText").textContent = countdownText;
-        }
-      }
-
-      // Initial call to set the countdown without a one-second delay
-      updateCountdown();
-
-      // Update the countdown every second
-      setInterval(updateCountdown, 1000);
-
       //
       const cursor = document.querySelector(".cursor");
       const editCursor = (e) => {
