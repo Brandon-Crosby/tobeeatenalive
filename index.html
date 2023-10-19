@@ -113,7 +113,7 @@
 
       const animationDelay = isMobile ? 2 : 5.2; // Adjust the delay based on device
 
-      const animationDelayArtist = isMobile ? 4 : 9; // Adjust the delay based on device
+      const animationDelayArtist = isMobile ? 2 : 9; // Adjust the delay based on device
 
       window.addEventListener("mousemove", editCursor);
 
@@ -213,7 +213,14 @@
           x: 6, // Change the ending position values
           y: -2,
           opacity: 1,
-          ease: Power2.easeOut, // Use a different ease function
+          ease: isMobile
+            ? Expo.easeInOut
+            : RoughEase.ease.config({
+                strength: 8,
+                points: 40,
+                template: Linear.easeNone,
+                randomize: false,
+              }), // Use a different ease function
           clearProps: "all",
         }
       );
