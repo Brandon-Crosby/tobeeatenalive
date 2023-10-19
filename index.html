@@ -110,7 +110,7 @@
 
       const isMobile = window.innerWidth <= 900; // Define a breakpoint for mobile
 
-      const animationDelay = isMobile ? 2 : 5.2; // Adjust the delay based on device
+      const animationDelay = isMobile ? 0.5 : 5.2; // Adjust the delay based on device
 
       const animationDelayArtist = isMobile ? 4 : 9; // Adjust the delay based on device
 
@@ -199,28 +199,28 @@
         }
       );
 
-      // TweenLite.fromTo(
-      //   ".hero-title p",
-      //   0.3,
-      //   {
-      //     x: -6,
-      //     y: 2,
-      //     opacity: 0,
-      //   },
-      //   {
-      //     delay: animationDelayArtist,
-      //     x: 6,
-      //     y: -2,
-      //     opacity: 1,
-      //     ease: RoughEase.ease.config({
-      //       strength: 8,
-      //       points: 40,
-      //       template: Linear.easeNone,
-      //       randomize: false,
-      //     }),
-      //     clearProps: "all",
-      //   }
-      // );
+      TweenLite.fromTo(
+        ".hero-title p",
+        0.3,
+        {
+          x: -6,
+          y: 2,
+          opacity: 0,
+        },
+        {
+          delay: animationDelayArtist,
+          x: 6,
+          y: -2,
+          opacity: 1,
+          ease: RoughEase.ease.config({
+            strength: 8,
+            points: 40,
+            template: Linear.easeNone,
+            randomize: false,
+          }),
+          clearProps: "all",
+        }
+      );
     </script>
   </body>
 </html>
