@@ -53,6 +53,9 @@
         ></a>
 
         <div class="hero-title">
+          <h1 class="glitch" data-text="to be eaten alive">
+            TO BE EATEN ALIVE
+          </h1>
           <p>MARIAH THE SCIENTIST</p>
           <p id="countdownText" style="color: white">
             Countdown will appear here
@@ -177,30 +180,30 @@
         0.1
       );
 
-      TweenLite.fromTo(
-        ".hero-title h1",
-        0.3,
-        {
-          x: -6,
-          y: 2,
-          opacity: 0,
-        },
-        {
-          delay: animationDelay,
-          x: 6,
-          y: -2,
-          opacity: 1,
-          ease: RoughEase.ease.config({
-            strength: 8,
-            points: 40,
-            template: Linear.easeNone,
-            randomize: false,
-          }),
-          clearProps: "all",
-        }
-      );
-
       if (window.innerWidth > 900) {
+        TweenLite.fromTo(
+          ".hero-title h1",
+          0.3,
+          {
+            x: -6,
+            y: 2,
+            opacity: 0,
+          },
+          {
+            delay: animationDelay,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease: RoughEase.ease.config({
+              strength: 8,
+              points: 40,
+              template: Linear.easeNone,
+              randomize: false,
+            }),
+            clearProps: "all",
+          }
+        );
+
         // This code will run only on desktop devices (screen width greater than 900 pixels)
 
         TweenMax.fromTo(

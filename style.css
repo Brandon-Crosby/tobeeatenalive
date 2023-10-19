@@ -11,6 +11,10 @@ html, body {
       cursor: none; 
 }
 
+body {
+background: url(mariah.gif) no-repeat 50% 50%;
+} 
+
 .cursor {
       pointer-events: none;
       position: fixed;
@@ -324,10 +328,6 @@ html, body {
             padding-right: 6px;
       }
 
-
-      body {
-            background: url(mariah.gif) no-repeat 50% 50%;
-      } 
 
       .instagram {
             display: none;
