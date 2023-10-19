@@ -292,7 +292,7 @@ background: url(mariah.gif) no-repeat 50% 50%;
     }
 
 @media(max-width: 900px) {
-      .watch, .rotatethis, .hero-gif, .cursor {
+      .watch, .rotatethis, .hero-gif, .cursor, .hero-title h1 {
             display: none !important;
       }
 
