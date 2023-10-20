@@ -4,7 +4,7 @@ html, body {
       width: 100%;
       height: 100vh;
       font-family: "Monument Extended";
-      /* background: url(giphy.gif) no-repeat 50% 50%; */
+      background: url(giphy.gif) no-repeat 50% 50%;
       background-color: black;
       background-size: cover;
       text-transform: uppercase;
@@ -23,14 +23,15 @@ html, body {
       cursor: none; /* Hide the default cursor */
     }
 
-/* .gif-overlay {
+.gif-overlay {
       z-index: -1;
       margin: 0%;
       padding: 0%;
       width: 100%;
       height: 100vh;
       background: rgba(14, 14, 14, 0.8);
-} */
+
+}
 
 .nav {
       position: fixed;
@@ -103,14 +104,14 @@ html, body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 100%;
+      width: 48vw;
       height: 46vh;
-      width: 326px;
-      background: url(tbea.png) no-repeat 50% 50%;
+      background: url(mariah.gif) no-repeat 50% 50%;
       background-size: cover;
       animation-delay: 2s;
-      /* -webkit-animation: animateGIF 4s linear;
-      transition: transform 0.3s ease; */
+      -webkit-animation: animateGIF 4s linear;
+      transition: transform 0.3s ease;
+      z-index: -1;
 }
 
 .instagram {
@@ -268,8 +269,9 @@ html, body {
       color: #fff;
       font-family: Helvetica;
       font-weight: 100;
-      font-size: 12px;
-}
+      font-size: 24px; /* Adjust the font size */
+      padding: 12px; /* Add padding to create space between letters */
+    }
 
 .rotatethis {
       position: absolute;
@@ -294,13 +296,11 @@ html, body {
       }
 
       body {
-       background: url(tbea.png) 50% 50%;
-    background-size: 260px;
-    background-color: black;      } 
+            background: url(mariah.gif) no-repeat 50% 50%;
+            } 
 
       .hero-title p {
             letter-spacing: 2px;
-            color: beige;
       }
 
       .listensong {
@@ -312,15 +312,15 @@ html, body {
             z-index: 2;
             position: absolute;
             bottom: 0%;
-            right: 72px;
+            right: 80px;
             line-height: 80px;
             margin: 0 40px;
-            color: beige;
+            color: grey;
             padding: 0 10px;
             font-family: Helvetica;
             font-size: 12px;
             font-weight: 100;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             text-decoration: none;
       }
       
@@ -343,12 +343,10 @@ html, body {
       .hero-title {
             top: 45%;
             left: 50%;
-            top: 74%;
+            top: 55%;
             left: 51%;
             width: 256px;
             text-align: center;
-           
-            color: grey;
       }
 
       .hero-title h1 {

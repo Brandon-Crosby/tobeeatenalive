@@ -11,15 +11,13 @@
       href="MariahLogo+Mockup+Black+Purple.png" />
     <meta content="ig: @brandosound" />
     <!-- stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="completed-styling.css" />
 
     <!-- ionicons -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!-- jquery -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="countdown.js"></script>
-
     <!-- tweenmax - gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   </head>
@@ -33,8 +31,8 @@
             class="watch"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://mariahthescientist.lnk.to/TBEA"
-            ><ion-icon name="play"></ion-icon>pre-order now</a
+            href="https://mariahthescientist.lnk.to/FromAWoman?fbclid=PAAaaRbJ8UDhMuEhuvVfpMFt_Vk6rt9Mp05Ik4ZlVxnD-LJKAhWZH_o44PWfo_aem_AZNnlWQLh2o76JaIddcTiVnneSPEB-zZo1BEB1EF4hzKtqVOGraIAxo9EFByJeuUzAw"
+            ><ion-icon name="play"></ion-icon> listen now</a
           >
           <a
             rel="noopener noreferrer"
@@ -45,23 +43,69 @@
           ></a>
         </div>
 
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=K-NSQpEVjB8"
-          ><div class="hero-gif"></div
-        ></a>
+        <div class="hero-gif"></div>
 
         <div class="hero-title">
           <!-- <h1 class="glitch" data-text="to be eaten alive">
             TO BE EATEN ALIVE
           </h1> -->
+          <p>TO BE EATEN ALIVE</p>
           <p>MARIAH THE SCIENTIST</p>
-          <p id="countdownText">Countdown will appear here</p>
+          <div class="project-list">
+            <p class="project p-1">
+              <div class="project-title"><p>Apple Music</p></div>
+            </p>
+            <div class="project p-2">
+              <div class="project-title"><p>Spotify</p></div>
+
+            </div>
+            <div class="project p-3">
+              <div class="project-title"><p>youtube</p></div>
+            </div>
+            <div class="project p-4">
+              <div class="project-title"><p>Amazon</p></div>
+            </div>
+            <div class="project p-4">
+              <div class="project-title"><p>Pandora</p></div>
+            </div>
+            <div class="project p-4">
+              <div class="project-title"><p>Tidal</p></div>
+            </div>
+            <div class="project p-4">
+              <div class="project-title"><p>Deezer</p></div>
+            </div>
+          </div>
         </div>
 
+        <!-- <div class="wrapper-new">
+          <div class="project-list">
+            <div class="project p-1">
+              <div class="project-title"><h1>Motionland</h1></div>
+              <div class="project-categ">Branding</div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project p-2">
+              <div class="project-title"><h1>Focus Reactive</h1></div>
+              <div class="project-categ">Photography</div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project p-3">
+              <div class="project-title"><h1>Aspect</h1></div>
+              <div class="project-categ">Web Design</div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project p-4">
+              <div class="project-title"><h1>Logomark</h1></div>
+              <div class="project-categ">Branding</div>
+              <div class="project-overlay"></div>
+            </div>
+          </div>
+        </div> -->
+
         <div class="rotatethis">
-          <h2 id="rotated">••• to •••••• be •••••• eaten •••••• alive •••</h2>
+          <pre>
+            <h2 id="rotated">buckles laboratories</h2>
+          </pre>
         </div>
 
         <div class="social-media">
@@ -81,8 +125,8 @@
           class="watch-mobile"
           rel="noopener noreferrer"
           target="_blank"
-          href="https://mariahthescientist.lnk.to/TBEA"
-          ><ion-icon name="play"></ion-icon>pre-order now</a
+          href="https://mariahthescientist.lnk.to/FromAWoman?fbclid=PAAaaRbJ8UDhMuEhuvVfpMFt_Vk6rt9Mp05Ik4ZlVxnD-LJKAhWZH_o44PWfo_aem_AZNnlWQLh2o76JaIddcTiVnneSPEB-zZo1BEB1EF4hzKtqVOGraIAxo9EFByJeuUzAw"
+          ><ion-icon name="play"></ion-icon> listen now</a
         >
         <div class="listensong">
           <ul>
@@ -90,17 +134,17 @@
           </ul>
         </div>
       </div>
-
       <div class="gif-overlay"></div>
-    </div>
-    <script src="countdown.js"></script>
 
+      <!-- Your page content here -->
+    </div>
     <script
       type="text/javascript"
       src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
+    <!-- <script src="countdown.js"></script> -->
 
+    <!-- Include any other necessary scripts for this page -->
     <script>
-      //
       const cursor = document.querySelector(".cursor");
       const editCursor = (e) => {
         const { clientX: x, clientY: y } = e;
@@ -110,23 +154,23 @@
 
       const isMobile = window.innerWidth <= 900; // Define a breakpoint for mobile
 
-      const animationDelay = isMobile ? 2 : 3; // Adjust the delay based on device
+      const animationDelay = isMobile ? 2 : 5.2; // Adjust the delay based on device
 
-      const animationDelayArtist = isMobile ? 4 : 5; // Adjust the delay based on device
+      const animationDelayArtist = isMobile ? 4 : 9; // Adjust the delay based on device
 
       window.addEventListener("mousemove", editCursor);
 
       const circleType = new CircleType(document.getElementById("rotated"));
 
       TweenMax.from(".artist", 2, {
-        delay: 3,
+        delay: 5.4,
         opacity: 0,
         y: 20,
         ease: Expo.easeInOut,
       });
 
       TweenMax.from(".watch", 2, {
-        delay: 2.9,
+        delay: 5.5,
         opacity: 0,
         y: 20,
         ease: Expo.easeInOut,
@@ -147,7 +191,7 @@
       });
 
       TweenMax.from(".rotatethis", 2, {
-        delay: 2,
+        delay: 6,
         opacity: 0,
         ease: Expo.easeInOut,
       });
@@ -156,7 +200,7 @@
         ".social-media ul li",
         2,
         {
-          delay: 3,
+          delay: 5.7,
           opacity: 0,
           y: 20,
           ease: Expo.easeInOut,
@@ -168,7 +212,7 @@
         ".listensong ul li",
         2,
         {
-          delay: 3,
+          delay: 5.9,
           opacity: 0,
           y: 20,
           ease: Expo.easeInOut,
@@ -212,7 +256,7 @@
           },
           {
             delay: animationDelayArtist,
-            x: 3.5, // Change the ending position values
+            x: 6, // Change the ending position values
             y: -2,
             opacity: 1,
             ease: RoughEase.ease.config({
