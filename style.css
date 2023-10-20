@@ -104,8 +104,8 @@ html, body {
       left: 50%;
       transform: translate(-50%, -50%);
       max-width: 100%;
-      height: 46vh;
-      width: 326px;
+      height: 353px;
+    width: 353px;
       background: url(tbea.png) no-repeat 50% 50%;
       background-size: cover;
       animation-delay: 2s;

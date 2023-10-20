@@ -110,9 +110,9 @@
 
       const isMobile = window.innerWidth <= 900; // Define a breakpoint for mobile
 
-      const animationDelay = isMobile ? 2 : 3; // Adjust the delay based on device
+      const animationDelay = isMobile ? 2 : 1.5; // Adjust the delay based on device
 
-      const animationDelayArtist = isMobile ? 4 : 5; // Adjust the delay based on device
+      const animationDelayArtist = isMobile ? 4 : 4; // Adjust the delay based on device
 
       window.addEventListener("mousemove", editCursor);
 
@@ -126,7 +126,7 @@
       });
 
       TweenMax.from(".watch", 2, {
-        delay: 2.9,
+        delay: 1.5,
         opacity: 0,
         y: 20,
         ease: Expo.easeInOut,
@@ -147,7 +147,7 @@
       });
 
       TweenMax.from(".rotatethis", 2, {
-        delay: 2,
+        delay: 1,
         opacity: 0,
         ease: Expo.easeInOut,
       });
@@ -156,7 +156,7 @@
         ".social-media ul li",
         2,
         {
-          delay: 3,
+          delay: 1.5,
           opacity: 0,
           y: 20,
           ease: Expo.easeInOut,
@@ -168,7 +168,7 @@
         ".listensong ul li",
         2,
         {
-          delay: 3,
+          delay: 1.5,
           opacity: 0,
           y: 20,
           ease: Expo.easeInOut,
@@ -212,7 +212,7 @@
           },
           {
             delay: animationDelayArtist,
-            x: 3.5, // Change the ending position values
+            x: 2.5, // Change the ending position values
             y: -2,
             opacity: 1,
             ease: RoughEase.ease.config({
