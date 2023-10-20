@@ -317,7 +317,7 @@ html, body {
             margin: 32px 0px 0px 60px;
             color: white;
             padding: 0 10px;
-            font-family: Helvetica;
+            font-family: Tahoma, Arial, sans-serif;
             font-size: 12px;
             font-weight: 100;
             letter-spacing: 2px;
@@ -343,7 +343,7 @@ html, body {
       .hero-title {
             top: 45%;
             left: 50%;
-            top: 74%;
+            top: 80%;
             left: 51%;
             width: 256px;
             text-align: center;
