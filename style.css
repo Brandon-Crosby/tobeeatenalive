@@ -294,7 +294,7 @@ html, body {
       }
 
       body {
-       background: url(tbea.png) no-repeat 50% 50%;
+       background: url(tbea.png) no-repeat 50% 35%;
     background-size: 260px;
     background-color: black;      } 
 
@@ -310,11 +310,11 @@ html, body {
       .watch-mobile {
             display: block;
             z-index: 2;
-            position: absolute;
+            /* position: absolute; */
             /* bottom: 0%;
             right: 62px; */
             line-height: 80px;
-            margin: 0px 56px;
+            /* margin: 0px 56px; */
             color: white;
             padding: 0 10px;
             font-family: Tahoma, Arial, sans-serif;
