@@ -300,7 +300,7 @@ html, body {
 
       .hero-title p {
             letter-spacing: 2px;
-            color: black;
+            color: unset;
       }
 
       .listensong {
@@ -315,7 +315,7 @@ html, body {
             right: 62px;
             line-height: 80px;
             margin: 0 40px;
-            color: beige;
+            color: unset;
             padding: 0 10px;
             font-family: Helvetica;
             font-size: 12px;
