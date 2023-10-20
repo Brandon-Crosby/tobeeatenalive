@@ -294,13 +294,13 @@ html, body {
       }
 
       body {
-       background: url(tbea.png) 50% 50%;
+       background: url(tbea.png) no-repeat 50% 50%;
     background-size: 260px;
     background-color: black;      } 
 
       .hero-title p {
             letter-spacing: 2px;
-            color: unset;
+            color: white;
       }
 
       .listensong {
@@ -315,7 +315,7 @@ html, body {
             right: 62px;
             line-height: 80px;
             margin: 0 40px;
-            color: unset;
+            color: white;
             padding: 0 10px;
             font-family: Helvetica;
             font-size: 12px;
