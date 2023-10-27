@@ -15,7 +15,7 @@ function updateCountdown() {
     // document.getElementById("differentContent").innerHTML = "New content to display";
 
     // You can also redirect to a different page
-    window.location.href = "new-page.html";
+    window.location.href = "https://mariahthescientist.lnk.to/tbea";
   } else {
     const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
